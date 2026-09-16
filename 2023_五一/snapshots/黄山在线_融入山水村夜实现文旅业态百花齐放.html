@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+<meta name="publisher" content="TideCMS 9.0">
+		<meta charset="UTF-8">
+            <meta name="keywords" content="">
+            <meta name="description" content="">
+		    <title>融入“山水村夜”实现文旅业态“百花齐放”_要闻_黄山在线</title>
+            <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+	    	<link rel="stylesheet" href="/css/pc/common2022.css" type="text/css" charset="utf-8"/>
+	        <link rel="stylesheet" href="/css/pc/reset.css" type="text/css" charset="utf-8"/>
+	        <link rel="stylesheet" href="/css/pc/list.css" type="text/css" charset="utf-8"/>
+	        <link rel="stylesheet" href="/css/pc/content.css" type="text/css" charset="utf-8"/>
+            <!--[if lt IE 8]> 
+        	<script type="text/javascript" src="/js/pc/jquery-1.11.1.min.js"></script>
+            <![endif]-->
+            <!--[if IE 8]> 
+        	<script type="text/javascript" src="/js/pc/jquery-1.11.1.min.js"></script>
+            <![endif]-->
+            <!--[if gte IE 8]> 
+            <script type="text/javascript" src="/js/pc/jquery-3.3.1.min.js"></script>
+            <![endif]-->
+            <!--[if !IE]><!-->
+            <script type="text/javascript" src="/js/pc/jquery-3.3.1.min.js"></script>
+            <!--<![endif]-->
+            <script type="text/javascript" src="/js/pc/videoPlayer.js"></script>
+  
+            <script type="text/javascript">
+            item_infos = window.item_infos || {
+                title:"融入“山水村夜”实现文旅业态“百花齐放”",
+                url:"https://www.huangshannews.cn\/hsnews\/web\/politics\/news\/content_22641.shtml",	
+                photo:"\/images\/2023\/5\/10\/\/20235101683690190670_211_t1080.jpg",	
+                summary:"",
+                globalid:"2876186",
+                channelcode:"15892_16072_16073_16076_16077_",
+                userid:"211",
+                publish_date:"2023-05-10 11:53:36",
+                appStat:1  //1为app统计开
+            }  
+            
+            var gid=2876186;
+            </script>
+ 
+    <!-- jquery end -->
+	</head>
+	<body>
+	<!--头部开始-->	
+	       
+<div class="top-nav J-top-bar">
+    <div class="wrap clearfix">
+        <div class="left fL">
+            <ul>
+                <li>
+                    <a onclick="SetHome(this,window.location)" href="javascript:;" class="txt" rel="nofollow">设为首页</a>
+                    <a onclick="AddFavorite(window.location,document.title)"  href="javascript:;" class="txt" rel="nofollow">加入收藏</a>
+                    <a href="javascript:;" class="txt" rel="nofollow">天气：
+                         <iframe name="weather_inc" src="//i.tianqi.com/index.php?c=code&id=50" width="60" height="50" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="color:white;"></iframe>
+                    </a>
+                </li>
+            </ul>
+        </div> 
+        <div class="con fR">
+            <ul>
+                <li class="last">
+                    <a href="javascript:;" class="txt" rel="nofollow">互联网新闻信息服务许可证编号: 34120180012</a> 
+                	<a href="javascript:;" class="txt" rel="nofollow"><i class="ico-phone"></i>0559-2583965</a>
+                	<a href="javascript:;" class="txt" rel="nofollow"><i class="ico-email"></i>396574552</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div id="topadv"></div>
+
+		<div class="logo-wrap logolist-box">
+			<div class="logo-box">
+				<a href="/" target="_blank">
+					<img src="/images/logonew.png" />
+				</a>
+			</div>
+			<div class="logo-box2">
+	<a href="">
+		<img src="/images/zgjcs.png" />
+	</a>
+</div>
+
+			<div class="newpage-list">
+				<ul id="paperlist">
+					
+				</ul>
+			</div>
+			<div class="search-box J-search-wrap">
+				<div class="src-one">
+					<div class="search-input">
+						<span class="sch-logo"><i class="ico-search"></i></span>
+						<input type="text" placeholder="输入关键字" />
+					</div>
+					<span class="search-btn btn"><a href="javascript:;">站内搜索</a></span>
+				</div>
+				<div class="src-two">
+					<h3>举报违法和不良信息</h3>
+					<p>电话:0559-2583965     邮箱:hszxbjb@163.com</p>
+				</div>
+			</div>
+		</div>
+<script>
+$(function(){
+        	$.ajax({
+					type:"GET",
+					url:"/adv/a//adv.json",
+                    dataType:"json",
+					success:function(data){
+						//console.log(data);
+						 var strhtml="";
+						for(var i=0;i<data.length;i++){
+						    strhtml+='<div class="adv"><a href="'+data[i].href+'" title="'+data[i].title+'" target="_blank">';
+						    strhtml+='<img src="'+data[i].photo+'" alt="'+data[i].title+'"/>';
+					        strhtml+='</a></div>';
+						}
+						 $("#topadv").html(strhtml);
+				    }
+		  });
+		   $.ajax({
+					type:"GET",
+					url:"/report//bzl.json",
+                    dataType:"json",
+					success:function(data){
+						//console.log(data);
+					    var strhtml="";
+						for(var i=0;i<data.length;i++){
+						    strhtml+='<li>'
+						    strhtml+='<a href="'+data[i].href+'" title="'+data[i].title+'" target="_blank">';
+						    strhtml+='<img src="'+data[i].photo+'" alt="'+data[i].title+'"/>';
+					        strhtml+='</a></li></div>';
+						}
+						 $("#paperlist").html(strhtml);
+				    }
+				   
+		   });
+
+  });
+ </script>
+
+		
+		<div class="nav-wrap">
+			<div class="logo-wrap">
+				<div class="navlist">
+					<ul>
+					    <li>
+							<a href="/hsnews/web/politics/g/list.shtml" target="_blank">国内</a>
+						</li>
+					    <li>
+							<a href="/hsnews/web/politics/h/list.shtml" target="_blank">国际</a>
+						</li>
+						<li>
+							<a href="/hsnews/web/politics/news/list.shtml" target="_blank">黄山要闻</a>
+						</li>
+						<li>
+							<a href="/hsnews/web/tdpl/list.shtml" target="_blank">天都时评</a>
+						</li>
+						<li>
+							<a href="/hsnews/web/city/travel/list.shtml" target="_blank">理论</a>
+						</li>
+						<li>
+							<a href="/hsnews/web/politics/subject/list.shtml" target="_blank">新闻专题</a>
+						</li>
+						<li>
+							<a href="/hsnews/web/qwfb/list.shtml" target="_blank">公示公告</a>
+						</li>
+						<li>
+							<a href="/hsnews/web/politics/k/list.shtml" target="_blank">数据库</a>
+						</li>
+						<!--<li>-->
+						<!--	<a href="/hsnews/web/zbkt/list.shtml" target="_blank">直播看台</a>-->
+						<!--</li>-->
+						<!--<li>-->
+						<!--	<a href="http://www.huangshannews.cn/politics/index.shtml?spm=0.0.0.0.SwaczC&file=index.shtml" target="_blank">我要说</a>-->
+						<!--</li>-->
+						<!--<li>-->
+						<!--	<a href="/hsnews/web/wyh/list.shtml" target="_blank">我要嗨</a>-->
+						<!--</li>-->
+						<li class="more">
+							<a href="javaScript:;" class="morenav">更多</a>
+							<div class="navhide">
+								<div class="navhide-box">
+									<a href="/hsnews/web/city/culture/list.shtml" target="_blank">文化</a>
+								</div>
+								<div class="navhide-box">
+									<a href="/hsnews/web/city/education/list.shtml" target="_blank">教育</a>
+								</div>
+								<div class="navhide-box">
+									<a href="/hsnews/web/city/travel/list.shtml" target="_blank">旅游</a>
+								</div>
+								<div class="navhide-box">
+									<a href="/hsnews/web/gallery/list.shtml" target="_blank">图库</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+    
+	<!--头部结束-->
+	
+	<!--中心部分开始-->
+	<div class="content-box">
+	  <div>
+		<div class="ct-left">
+               	         <div class="ct-nav">
+	         	<a href="/index.shtml"  target="_blank">首页</a>
+                        <span>></span>  
+                      	         	        <a href="javascript:;">政事</a>
+	         	        <span>></span>
+                      	         	<a href="/hsnews/web/politics/news//list.shtml"  target="_blank">要闻</a>
+	         </div>
+              	         <div class="content-wrap">
+	         	 <h3>融入“山水村夜”实现文旅业态“百花齐放”</h3>
+	         	 <div class="assist">
+	         	 	<div class="as-left">
+		         	 	<span class="time">2023年05月10日 11:53:36</span>
+		         	 	<span class="as-line">|</span>
+		         	 	<span class="source">作者：李晓洁</span>
+		         	 <!--<span class="source"> 责编：胡晓苗 </span>-->
+		         	 	<span class="source">来源：黄山在线</span>
+	         	    </div>
+	         	    <div class="as-right" id="J_adjustFontsize">
+	         	    	<span  id="font-big"><a href="javascript:;" class="bigger"></a></span>
+	         	    	<span class="as-line">|</span>
+	         	    	<span  id="font-small"><a href="javascript:;" class="smaller"></a></span>
+	         	    </div>
+	         	 </div>
+                    
+                          	         	 <div class="text-center content">
+	         	     <p style="text-align: justify; text-indent: 2em;">今年“五一”期间，全市共接待游客332.5万人次，较2019年增长32.76%，旅游总收入22.56亿元，较2019年增长34.77%。</p><p style="text-align: center;"><img src="http://www.huangshannews.cn/images/2023/5/10/20235101683690127967_211_s.jpg" border="0"/></p><p style="text-align: justify;">　　黄山文旅业态融入“山水村夜”，实现“百花齐放”，催生出“醉美”黄山的“一步一景”，点燃了这个假期。思维破圈下，各地各景区创新供给，纷纷以新思路、新打法、新玩法推动全域旅游高质量发展。</p><p style="text-align: justify;">　　登山。无与伦比的黄山冠绝天下，“五一”假期，黄山风景区共接待游客117835人。为提升游客游览舒适度和满意度，景区日接待游客量控制在3万人以内，全山共设立9个固定志愿服务台和多个临时志愿服务点，3000多名干部员工坚守岗位，热情为游客提供服务。与黄山南北相望、相映生辉的齐云山风景区突出“来齐云山&nbsp;做逍遥客”品牌定位，推出了文昌大典、祈福巡游、龙游天街等活动，游客沉浸式体验复古游山、祈愿纳福的乐趣。</p><p style="text-align: justify;">　　亲水。假期里，新安江滨水旅游景区开通“新安月夜”夜游航线。华灯初上，市民游客乘徽派画舫畅行江面，探访屯浦归帆听徽商历史、远眺孙王阁读屯溪由来、望尤溪古渡听商妇传奇、赏照壁怀古拜徽州人文……近距离感受山水和文化的魅力。太平湖景区水上娱乐中心，更是热闹非凡、游人如织，电动船、摩托艇、飞伞艇、碰碰船……各类水上娱乐项目丰富多彩，游客尽情嬉戏沉浸其中。</p><p style="text-align: justify;">　　进村。古老村落也在焕发全新活力，西递景区升级传统的抛绣球婚俗表演，以歌舞互动的形式注入青春活力。西溪南古村落景区，别具风格的“徽州市集”吸引一众游客，大家打卡古村美景，在市集买伴手礼，尝特色小吃。祁门县闪里镇磻村的古戏台上，目连戏、黄梅戏轮番登场。谢裕大茶博园内，游客体验茶叶采摘，跟随师傅学习制茶技艺，感受徽州茶文化的独特魅力。</p><p style="text-align: justify;">　　享夜。夜晚的宏村奇墅湖畔，大型实景文化演出《宏村·阿菊》盛大复演，电影特技、水火特效场景、3D立体成像技术等现代高科技手段变幻迭出，高空特技、时尚跑酷、水上摩托艇等多种新奇表演，带领观众开启了一段震撼人心、充满梦幻与诗意的徽文化之旅。徽州古城内，铿锵的鼓点中，“大鱼”在夜色中游来，瞻淇嬉鱼灯和汪满田嬉鱼灯轮番“闹”古城，大人、小孩、本地人、外地人纷纷伴着鱼灯走，感受着鱼灯的乐趣。花山谜窟景区内，“森林演奏会”现场人头攒动，优美的笛音在谜窟山谷中飘荡，让游客如痴如醉。</p><p style="text-align: justify;">　　美食美宿也为文旅业态“增色添香”。除了臭鳜鱼、毛豆腐、刀板香、徽墨酥等传统徽菜小吃，三潭枇杷果冻、西溪南蜂蜜包谷粿、灵山果蔬酒酿盅……创新改良的时尚徽味正在征服更多人的味蕾。另一方面，全市3215家民宿以皖南山水为笔，以徽州文化为墨，以各异的服务供给承载八方游客的村居梦想。</p><p style="text-align: justify;">　　这个初夏，黄山旅游迈着青春蓬勃的步伐，点燃了所有人的激情。</p><p style="text-align: justify;">　　</p><p><br/></p>
+	         	     <p class="editor-name"><span></span><span>值班编辑：胡晓苗</span></p>
+	         	 </div>
+	         	 
+	         </div>
+		</div>
+	    <div class="ct-right">
+	    	<div class="ctr-top"> 
+	    	      
+     
+	    	</div>
+	    	<div class="ctr-bottom"> 
+	    		<div class="ctr-title">
+	    		    <h5>热点新闻</h5>
+	    		    <span class="ctr-line"></span>
+	    		</div>
+	    	    <div class="ctr-content">
+                           <ul id="right_box"></ul>
+<script>
+
+$(function(){
+    var str="";
+    $.ajax({
+          url:"/hsnews/web/politics/news//random_news.json",
+          type:'get',
+          dataType:'json',
+          cache:false,
+          success:function(data){
+              //   result=JSON.parse(data);
+                 var result=data;
+                 for(var i=0;i<result.length;i++){
+                      var truehref=result[i].href;
+                      if(result[i].link!='' && result[i].link!=null){
+                          truehref=result[i].link;
+                      }
+                      str+='<li><div class="ctr-imgbox"><a href="'+truehref+'" target="_blank" title="'+result[i].title+'">';
+                      str+='<img src="'+result[i].imgsrc+'" alt="'+result[i].title+'"/>';
+                      str+='</a></div>';
+                      str+='<div class="ctr-text"><h5>';
+                      str+='<a href="'+truehref+'" target="_blank"  title="'+result.title+'">'+result[i].smalltitle+'</a></h5>';
+                      str+='<p class="ctr-date">'+result[i].date+'</p>';
+                      str+='</div></li>';
+                 }
+                 $("#right_box").append(str);
+          }   
+        
+    });
+    
+    
+});
+
+
+getDate("/hsnews/web/politics/news//random_news.json",5);
+function getDate(url,type){
+   var _url=url;
+   var s=type;
+   $.ajax({
+      url:_url,
+      type:'get',
+      dataType:'json',
+      cache:false,
+      success:function(data){
+          //   result=JSON.parse(data);
+          //   draw(data, s);
+      }   
+    }); 
+}
+
+function draw(d,s){
+    //取s个不相同的随机数
+      var arr=[];
+      var arrlist=d;
+      for(var i=0;i<s;i++){
+         var num=Math.round(Math.random()*(arrlist.length-1));
+          arr.push(arrlist.splice(num,1)[0]);
+     }
+      //取数据
+      var result=arr;
+
+      //写数据
+      var str="";
+      for(var i=0;i<result.length;i++){
+          var truehref=result[i].href;
+          if(result[i].link!='' && result[i].link!=null){
+              truehref=result[i].link;
+          }
+          str+='<li><div class="ctr-imgbox"><a href="'+truehref+'" target="_blank" title="'+result[i].title+'">';
+          str+='<img src="'+result[i].imgsrc+'" alt="'+result[i].title+'"/>';
+          str+='</a></div>';
+          str+='<div class="ctr-text"><h5>';
+          str+='<a href="'+truehref+'" target="_blank"  title="'+result.title+'">'+result[i].smalltitle+'</a></h5>';
+          str+='<p class="ctr-date">'+result[i].date+'</p>';
+          str+='</div></li>';
+     }
+     $("#right_box").append(str);
+}
+</script>
+    	    	 	
+
+ 
+	    	    </div>
+	    	    <p class="load-more"><a href="/hsnews/web/politics/news/list.shtml">查看更多</a></p>
+	    	</div>
+	    </div>
+	  </div>
+	</div>
+   <!--中心部分结束-->
+	
+	<!-- footer start -->
+           	<div class="footer">
+	    <div class="footer-bottom">
+	    	<div class="ft_top">
+	    		<div class="ft_left">
+			       <h5>
+			        <!--<a href="/html/about.html?abt=0" target="_blank">本站说明</a>
+			        	<a href="/html/about.html?abt=1" target="_blank">关于我们</a>
+			        	<a href="/html/about.html?abt=2" target="_blank">联系我们</a>  -->
+			        	<!--  <a href="javascript:;" target="_blank">友情链接</a> -->
+			        </h5>
+			        <p class="mt20">
+					  <a rel="nofollow" href="http://beian.miit.gov.cn/" target="_blank">皖ICP备12010547号-2 黄山在线网站版权所有，未经书面授权禁止使用</a> 
+					  <a rel="nofollow" href="javascript:;" target="_blank">皖网宣备080C09号</a>  
+					  <a rel="nofollow" href="javascript:;" target="_blank">互联网新闻信息服务许可证编号: 34120180012</a>  
+					</p>
+					<p class="mt20">				 
+					    <a rel="nofollow" href="javascript:;" target="_blank">黄山日报社主办</a>
+	            <a href="javascript:;" target="_blank">法律顾问： 胡炜</a>
+	            <a href="javascript:;" target="_blank">投稿邮箱：hszxbjb@163.com</a>
+					</p>
+	    		</div>
+	    	</div>
+	    	<div class="ft_bottom">
+	    	       <a target="_blank" href="http://www.12377.cn/"><img src="/images/index_bompage3.jpg" style="width: 126px;height: 50px;"></a>
+                   <a target="_blank" href="https://www.12377.cn/?spm=0.0.0.0.03xzf8"><img src="/images/index_bompage4.jpg" style="width: 126px;height: 50px;"></a>
+                   <a target="_blank" href="http://www.12321.cn/"><img src="/images/index_bompage5.jpg" style="width: 126px;height: 50px;"></a>
+                   <!--<a target="_blank" href="http://jubao.12377.cn:13225/reportform.do"><img src="/images/index_bompage6.jpg" style="width: 126px;height: 50px;"></a>-->
+                   <a target="_blank" href="http://www.shdf.gov.cn/"><img src="/images/index_bompage8.jpg" style="width: 126px;height: 50px;"></a>
+                   <a target="_blank" href="http://www.piyao.org.cn/yybgt/index.htm"><img src="/images/index_bompage9.jpg" style="width: 126px;height: 50px;"></a>
+                   <!--<a target="_blank" href="http://www.ah12377.cn/newsDetail/671"><img src="/images/index_bompage10.png" style="width: 126px;height: 50px;"></a>-->
+                   <a target="_blank" href="https://www.ah12377.cn/newsDetail/602"><img src="/images/index_bompage11.jpg" style="width: 126px;height: 50px;"></a>
+                   <a target="_blank" href="http://www.ah12377.cn/"><img src="/images/index_bompage12.png" style="width: 126px;height: 50px;"></a>
+            
+	    	</div>
+	    	<div class="sydw">
+	    	    <a href="//bszs.conac.cn/sitename?method=show&id=10208EAC20D449FCE053022819ACD10F" target="_blank"><img id="imgConac" vspace="0" hspace="0" border="0" src="/images/blue.png" data-bd-imgshare-binded="1"></a>
+	    	    <a target="_blank" href=" "><img src="https://program.xinchacha.com/xyt/xcc_small_ssl.png" style="width:59px;vertical-align: top;margin-top: 5px;"></a>
+	    	</div>
+	    </div>
+	</div>
+    <script>var site=5; </script><script src="//www.huangshannews.cn/js/tide_stat.js"> </script>
+
+	<!-- footer end -->	
+         
+         <script src="https://p.wts.xinwen.cn/dot-wts/spm.js"></script>
+         <script src="/js/pc/spm-config.js"></script>
+	 	 <script src="/js/pc/article.js"></script>
+         <script type="text/javascript" src="/js/pc/common.js"></script>  
+<script>
+         var isnav=isnav("政事");
+        if(isnav){
+            $("#navMain li:first").attr("class","");
+        	set_class2("#navMain li ","on","政事");
+	        set_class2("#navMain li ","cur","政事");
+            set_class2("#navSub .item a","bered","要闻"); 
+        }
+        $('.J-nav').mouseleave();
+	
+	
+     function isnav(domname){
+    	var navlist=$("#navMain li");
+    	var isnav=false;
+    	for(var i=0;i<navlist.length;i++){
+    	    if(domname==$(navlist[i]).text()){
+    	        isnav=true;
+    	        console.log($(navlist[i]).text());
+    	    }
+    	}
+    	console.log(isnav);
+    	return isnav;
+     }
+</script>
+	</body>
+</html>

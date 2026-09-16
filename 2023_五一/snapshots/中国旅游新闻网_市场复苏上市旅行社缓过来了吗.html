@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	
+	<title>市场复苏，上市旅行社缓过来了吗？</title>
+
+	<meta name="Keywords" content=""/>
+	<meta name="Description" content=""/>
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta name="" content=""/>
+	<link rel="stylesheet" type="text/css" href="../../../../../../amucsite/freePaper/pc/static/css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="../../../../../../amucsite/freePaper/pc/static/css/css.css"/>
+	<link rel="stylesheet" type="text/css" href="../../../../../../amucsite/freePaper/pc/static/css/calendar.css"/>
+	<script src="../../../../../../amucsite/freePaper/pc/static/js/jquery-1.6.4.min.js" type="text/javascript"></script>
+	<script src="../../../../../../amucsite/freePaper/pc/static/js/index.js" type="text/javascript" charset="utf-8"></script>
+       <style>
+    /*尾部*/
+.footer {
+       margin-top: 25px;
+    overflow: hidden;
+    width: 100%;
+    margin: 20px auto;
+    padding-top: 20px;
+}
+.footer-nav {
+    height: 40px;
+    line-height: 40px;
+    background-color: #26a0d3;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.foot-nav__head{
+    color: #fff;
+    margin-right: 40px;
+}
+
+.foot-nav__body, .foot-nav__head{
+    float: left;
+}
+
+.foot-nav__body{
+    font-size: 0;
+}
+.foot-nav__item{
+    display: inline-block;
+    margin-right: 10px;
+    padding-top: 7px;
+}
+.copyright {
+    padding: 15px 0 10px;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+	<div class="header">
+		<div class="blueLine">
+			<div class="wrap">
+				<img class="logo1 pull-left" src="../../../../../../amucsite/freePaper/pc/static/images/13.png" alt="" />
+				<ul class="pull-right">
+					<li class="pull-left"><a href="#">第一新闻</a></li>
+					<li class="pull-left"><a href="#">民生</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="header-mid">
+			<div class="wrap">
+				 <a href="http://www.ctnews.com.cn/index.html" target="_blank"><img class="logo" width="325px" height="58px" class="pull-left mgt6" src="http://www.ctnews.com.cn/images/logo.png" alt="" style="display:block;float:right"></a>	
+				<div class="pull-right">
+					 
+						 <div class="header-time pull-right" id="week" style="margin-left:6px;"></div>
+						<div class="header-time pull-right" id="paperdate">2023年05月11日</div>
+
+					<div style="clear: both;"></div>
+					<img src="../../../../../../amucsite/freePaper/pc/static/images/18.png" alt="" style="display:none" />
+				</div>
+			</div>
+		</div>
+		<div class="header-bottom"></div>
+	</div>
+	<div class="wrap">
+		<div class="nav">
+				<span class="pull-left dateTime" style="margin-top:10px;">
+				 
+				  
+				 	<span class="paperName" >日期：</span>
+				 	2023年05月11日
+
+
+			</span>	
+			<form name="form1" action="http://www.ctnews.com.cn:8088/founder/SearchServlet.do"  method="POST" style="" class="" target="_blank">
+		  <div class="pull-left" style="margin-left:50px;margin-top:10px;">
+				<input name="content" id="content"  type="text" size="20" maxlength="50">
+				<input type="submit" value="搜索" name="search" class="searchBtn"> 
+				
+				<input type="hidden" name="op" value="single">
+				<input type="hidden" name="siteID" value="">
+				
+				<input type="hidden" id="publishate" value="2023-05-11">
+				<input type="hidden" id="publishCate" value="2023/05/11">
+
+		  </div>	
+			</form>
+			
+			<span class="pull-right" style="margin-top:10px;" >
+				<span><a href="javascript:void(0)" id="go_PrePeriod" onclick="go_prePaper();" >&lt;&nbsp;上一期</a>&nbsp;&nbsp;<a id="go_NextPeriod" href="javascript:void(0)" onclick="go_nextPaper();"  >下一期&nbsp;&gt;</a></span>
+			</span>
+
+		<script language="javascript">
+
+
+function formatlong(dat){
+
+    //获取年月日，时间
+    var year = dat.getFullYear();
+    var mon = (dat.getMonth()+1) < 10 ? "0"+(dat.getMonth()+1) : dat.getMonth()+1;
+    var data = dat.getDate()  < 10 ? "0"+(dat.getDate()) : dat.getDate();
+/*    var hour = dat.getHours()  < 10 ? "0"+(dat.getHours()) : dat.getHours();
+    var min =  dat.getMinutes()  < 10 ? "0"+(dat.getMinutes()) : dat.getMinutes();
+    var seon = dat.getSeconds() < 10 ? "0"+(dat.getSeconds()) : dat.getSeconds();
+  */               
+    var newDate = year +"-"+ mon +"-"+ data/* +" "+ hour +":"+ min +":"+ seon*/;
+    return newDate;
+}
+
+
+
+			var myDate = new Date();
+	
+			if (document.getElementById('publishate').value==formatlong(myDate))
+				document.getElementById('go_NextPeriod').style.display="none";
+			
+			if (document.getElementById('publishCate').value=="2018/01/01")
+				document.getElementById('go_PrePeriod').style.display="none";
+			
+
+			function getDate(strDate){
+				  var date = eval('new Date(' + strDate.replace(/\d+(?=-[^-]+$)/, 
+				   function (a) { return parseInt(a, 10) - 1; }).match(/\d+/g) + ')');
+				  return date;
+			}
+
+			Date.prototype.Format = function (fmt) { //author: meizz 
+			var o = {
+				"M+": this.getMonth() + 1, //月份 
+				"d+": this.getDate(), //日 
+				"h+": this.getHours(), //小时 
+				"m+": this.getMinutes(), //分 
+				"s+": this.getSeconds(), //秒 
+				"q+": Math.floor((this.getMonth() + 3) / 3), //季度 
+				"S": this.getMilliseconds() //毫秒 
+			};
+			if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+			for (var k in o)
+			if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+			return fmt;
+		}
+
+			function preDate(Currdate){
+				curr_date=Currdate;
+				pre_paperDate=curr_date.setDate(curr_date.getDate()-1);
+				pre_paperDate=new Date(pre_paperDate);
+				return pre_paperDate;
+				}
+	
+			function next_Date(Currdate){
+				curr_date=Currdate;
+				pre_paperDate=curr_date.setDate(curr_date.getDate()+1);
+				pre_paperDate=new Date(pre_paperDate);
+				return pre_paperDate;
+				}
+
+			function go_prePaper(){
+				p_date=getDate(document.getElementById('publishate').value);
+				p_date=preDate(p_date);				
+				if ((p_date.getDay()==0) || (p_date.getDay()==6))
+					p_date=preDate(p_date);
+				if ((p_date.getDay()==0) || (p_date.getDay()==6))
+					p_date=preDate(p_date);
+
+				str_Date=p_date.Format('yyyy-MM-dd');
+				a_Date=str_Date.split('-');
+				strUrl="http://www.ctnews.com.cn/paper/"+a_Date[0]+a_Date[1]+'/'+a_Date[2]+"/node_01.html";
+				window.location.href=strUrl;	
+				}
+
+			function go_nextPaper(){
+				p_date=getDate(document.getElementById('publishate').value);
+				p_date=next_Date(p_date);					
+				if ((p_date.getDay()==0) || (p_date.getDay()==6))
+					p_date=next_Date(p_date);
+				if ((p_date.getDay()==0) || (p_date.getDay()==6))
+					p_date=next_Date(p_date);
+
+				str_Date=p_date.Format('yyyy-MM-dd');
+				a_Date=str_Date.split('-');
+				strUrl="http://www.ctnews.com.cn/paper/"+a_Date[0]+a_Date[1]+'/'+a_Date[2]+"/node_01.html";
+				window.location.href=strUrl;			
+				}
+
+		</script>
+
+		</div>
+
+
+		<div class="content clearfix">
+			<div class="newspaper-pic pull-left">
+				
+				<img class="preview" src="../../../pic/202305/11/10af59a4-4411-4fd7-9a63-98fae76f4438.jpg.2"  USEMAP=#PagePicMap>
+				<MAP NAME="PagePicMap"><Area coords="281.12436555,33.71283641,405.84855681,33.71283641,405.84855681,560.55855565,281.12436555,560.55855565" shape="polygon" href="content_79744.html"><Area coords="11.21857602,34.373874719999996,272.54545373999997,34.373874719999996,272.54545373999997,452.8096868,11.21857602,452.8096868" shape="polygon" href="content_79745.html"><Area coords="14.51815941,468.0135151,268.58595534,468.0135151,268.58595534,556.5923434,14.51815941,556.5923434" shape="polygon" href="content_79746.html"></MAP>
+				<div class="mgb25">
+					<div class="pull-left">
+						<span id="layout">第06版：<span class="font-weight">旅游报06版</span></span>
+					</div>
+					<div class="pull-right">
+						<span><a class="preart" href="../../../202305/11/node_05.html">上一版</a> </span>
+						<span><a class="nextArt" href="../../../202305/11/node_07.html">下一版</a> </span>
+						<a href="../../../att/202305/11/f5f0d327-7381-4d10-a9af-9bfc81bf651e.pdf" download><img class="pull-right mgl8" src="../../../../../../amucsite/freePaper/pc/static/images/09.png"></a>
+					</div>
+					
+					
+				</div>
+			</div>
+			<div class="detail pull-left">
+				<div class="detail-title">
+                	<span class="pull-left"><a href="http://www.ctnews.com.cn/paper/">首页</a></span>
+                	<span class="pull-left mgl10"><a href="javascript:history.back();">返回上一级</a></span>
+					<span class="pull-left mgl10"><a href="content_79744.html">上一篇</a> </span>
+					<span class="pull-left mgl10"><a class=preart href="content_79746.html">下一篇</a> </span>
+					
+
+					<div class="pull-right">
+						<a class="font-weight" onClick="zoomIn();" href="javascript:;">放大+</a>
+						&nbsp;<a class="font-weight" onClick="zoomOut();" href="javascript:;">缩小-</a>
+						&nbsp; <a class="font-weight" onClick="zoomDe();" href="javascript:;">默认<span class="font18">o</span></a>
+					</div>
+					  
+				</div>
+				<div class="detail-art">
+					 
+					 <p class="introtitle text-center" id="PreTitle"></p> 
+                     <h2 id="Title" class="art-title text-center">市场复苏，上市旅行社缓过来了吗？</h2> 
+                     <p class="subtitle text-center"  id="SubTitle"></p>
+						<div class="attachment" align="center">
+						<!--高级资源列表-->
+								<img src="../../../pic/202305/11/0061b64d-22dc-4186-85dc-6aa1a17dc324.jpg.2">
+								<p>    图虫创意 供图</p>
+						</div>
+					<div id=ozoom style="zoom:100%;" class="content">
+					<founder-content>
+						<!--enpcontent--><html>
+ <head></head>
+ <body>
+  <p> </p>
+  <p> □ 本报首席记者 王玮</p>
+  <p> </p>
+  <p> 近日，众信旅游、凯撒旅业和中青旅相继发布了2022年年度报告和2023年第一季度财报。去年“巨亏”和今年第一季度“仍未盈利”已成定局。疫情的冲击、宏观经济的波动和市场竞争的加剧对这个敏感行业带来的影响不可能马上消退。但值得高兴的是，随着市场的快速复苏，这些传统旅企正在与那段“夹缝中求生存”的日子告别。有业者表示，此刻，他们拾起的不仅是放下3年的“老本行”，还有更加“扛打”的信心。</p>
+  <p> </p>
+  <p> 境遇不同存挑战</p>
+  <p> </p>
+  <p> 对比这3家传统旅企的最新财报，尽管业绩仍在承压，但境况已不相同。</p>
+  <p> 亏损收窄是众信旅游去年和第一季度经营业绩表现的关键词。2022 年，公司营业总收入5.01亿元，同比下降了26.83%，归属于母公司股东的净利润为-2.21亿元，同比减少亏损52.18%。</p>
+  <p> 从“报告期内，众信旅游综合成本约4.35亿元，同比减少了32.38%”这一数据可以看出，2022年，众信旅游亏损情况同比收窄的主要原因是公司采取了建立健全降本增效机制、优化资产负债结构等措施。</p>
+  <p> 此外，众信旅游方面表示，去年，公司海外区域发展战略整合成效显著，在出境旅游尚未恢复的情况下为公司贡献了较为稳定的收入和利润来源。其中，境外公司收入增长至2021年同期的近400%，毛利率超过30%。境外公司恢复情况持续向好，为公司出境业务的全面复苏提供了坚实保障。</p>
+  <p> 随着出境旅游业务有所恢复，业务规模有所增加，众信旅游在今年第一季度的营业收入约为1.38亿元，同比增长131.72%；归属于母公司股东的净利润约为-3749.95万元，亏损同比收窄34.15%。</p>
+  <p> 2022年，中青旅由盈转亏。根据近期披露的2022年年度报告显示，中青旅去年实现营业总收入64.17亿元，同比下降了25.69%；归母净利润亏损3.34亿元，而上年同期为盈利2123.31万元。</p>
+  <p> 对于业绩下降，中青旅虽没有在年报中给出具体原因，但公司表示，2022年旅游市场持续低迷，旅游企业经营承受着前所未有的巨大压力，公司景区、整合营销、旅游服务等板块业务均受到了较大程度不利影响，且全年固定费用压缩空间较小。</p>
+  <p> 根据财报，去年，公司旅游产品服务业务的营业收入为4.42亿元，比上年同期下降了12.4%。中青旅在年报中强调，旅行社业务是其传统核心业务，目前公司已按照控股型架构打造形成旅行社与旅游互联网平台。不过，疫情发生以来旅行社入出境旅游业务一度暂停，直到今年年初才开始恢复。</p>
+  <p> 2023年第一季度，在旅游市场加快复苏的大环境下，中青旅的亏损收窄，公司实现营业收入16.58亿元，同比增长20.00%；实现归属于母公司股东的净利润为-0.05亿元，同比减亏1.07亿元。旅行社业务在报告期内营业收入实现同比增长，净利润同比持平。</p>
+  <p> 相比前两家上市公司，凯撒旅业的挑战正在持续加剧。财务数据显示，公司2022年营业收入约3.2亿元，同比减少了65.99%；归母净亏损约10.22亿元，同比扩大48.11%。</p>
+  <p> 不过，凯撒旅业的经营情况在出境旅游业务恢复后有了些许改善。今年第一季度，公司营业收入约7679.81万元，同比减少了36.82%；归母净亏损约4249.41万元，同比收窄32.61%。</p>
+  <p> 然而，凯撒旅业还将面临更大的挑战。5月4日，公司股票停牌一天，5月5日开市起复牌，并被实施“退市风险警示”及“其他风险警示”，股票简称由“ST凯撒”变更为“*ST凯撒”，股票交易的日涨跌幅限制5%。5月5日，*ST凯撒开盘便跌停。</p>
+  <p> 根据凯撒旅业发布的公告，公司被实施退市风险警示是由于2022年度经审计的归属于上市公司股东的所有者权益为负值，且公司2022年度财务报表被出具无法表示意见或者否定意见的审计报告。近几年，凯撒旅业屡次试图自救，但效果都没有达到预期。如今，面临旅游市场的激烈竞争，凯撒旅业需要付出更多的努力。</p>
+  <p> </p>
+  <p> 各施所长展优势</p>
+  <p> </p>
+  <p> “目前公司经营情况良好，不存在ST风险”“目前没有跟凯撒继续重组相关计划”“和飞猪不存在竞争关系，双方起到业务互补的作用”“公司现已经成为各大线上线下零售旅行社主要供应商”……在公布最新财报前，众信旅游根据投资者在互动平台的提问，连发消息回应，澄清了一些“坊间传闻”，字里行间也透露出市场复苏带给他们的“转机”。</p>
+  <p> “公司今年营业状况较去年同期有明显好转，随着出境旅游市场的逐步恢复，正加紧筹备各类精细化、多元化的旅游产品。”众信旅游方面近期在互动平台的这条回应便是信号之一。</p>
+  <p> 数据显示，五一假期，众信旅游的出境游短线产品报名较4月初增长约300%—400%。五一假期前夕出发的部分长线出境游产品也在上线后快速售罄，众信旅游产品部门多次追加五一假期前后出发团期。不仅如此，疫情发生前以出境业务见长的众信旅游，如今对国内旅游产品的开发也更加上心，以新疆产品为例，已经细分为：南疆一地、北疆一地、帕米尔赏花季、新疆全景列车等线路。他们的目的很简单，以自组成团、特色精品小团为主的产品去吸引更多80后、90后消费群体。</p>
+  <p> 前不久，凯撒旅业组织的“伊朗8日经典之旅”首发团，3个团组同时启程。在结束旅程回国之后，旅行社的工作人员收到了其中一位客人手写的感谢信，客人在信中说：“这个团队有特别好的安全感，与领队和导游具备强烈的担当意识是分不开的，这也是境外旅游重要的因素之一。”在大多数人习惯了互联网通信的当下，一封手写信显得格外“沉甸甸”，文字里透着难得的信任。</p>
+  <p> 市场的复苏带来了利好，也让企业更坚信要从最擅长的业务入手。从2023年第一季度报告来看，凯撒旅业正持续加强境外旅游业务的恢复。他们一边与亚洲、欧洲、非洲等目的地旅游局及旅游同行展开密切沟通，一边协调外部资源，组织内部团队，围绕相应目的地，筹划上线更多类型的出境游产品。</p>
+  <p> 中青旅旅行服务板块五一假期上线近3000余条产品，营业收入和服务游客量创下3年来新高。不过对于中青旅来说，还有一部分优势源于恢复中的入境旅游市场。</p>
+  <p> 3月31日，全国旅行社及在线旅游企业经营外国人入境团队旅游和“机票+酒店”业务恢复。当晚，中青旅首席品牌官徐晓磊在接受媒体采访时表示，过去3年，中青旅一直与境外旅行商保持联系，在政策研判、人员培训、产品研发、供应链恢复等方面有合作。中青旅方面也通过微信公众号称：“3年过去了，我们专业的外联队伍和语种最全的外语导游队伍一直都在。”机会自然是留给有准备的人的，也就在这个五一假期前夕，中青旅接待了来自美国、俄罗斯、德国和日本的入境游客，让他们在中国留下了美好的回忆。</p>
+  <p> 当然，“走出去”也是中青旅想做的事情。今年3月，由中青旅筹建运营的中国驻埃塞俄比亚中国签证申请中心在埃塞俄比亚首都亚的斯亚贝巴举办开业典礼。中青旅控股股份有限公司党委副书记、副董事长、总裁王思联表示，这是中青旅首次在海外筹建并运营的签证中心，将成为中青旅布局海外市场的重要一步。</p>
+  <p> </p>
+  <p> 持续探索看韧性</p>
+  <p> </p>
+  <p> 联合国世界旅游组织最新发布的《2023年全球旅游业晴雨表》认为，今年，全球旅游业将迎来强劲复苏，预计全球国际游客抵达人数可能恢复到疫情发生之前水平的80%至95%。中国旅游研究院发布的《中国旅游经济蓝皮书》预计，2023年，国内旅游人数约45.5亿人次，约恢复至2019年的76%。实现国内旅游收入约4万亿元，约恢复至2019年的71%。全年入出境游客人数有望超9000万人次，恢复至疫情发生前的31.5%。相关数据支撑下，多数业者判断，旅游业复苏向上的进程不会停止。</p>
+  <p> 翻看这3家旅企财报关于公司未来计划的部分，均能感受到他们对今年业务发展的信心。不过，细读下来也会发现，这份乐观是留有余地的。</p>
+  <p> “今年，凯撒旅业将充分发挥凯撒中国及海外DMC（目的地管理公司）的市场联动及资源统筹优势，深入拓展双边政府、企业间的公商务培训、考察、文化及商务交流业务，并在会议、会奖、商旅板块不断拓展产品及渠道资源。”这是财报中凯撒旅业基于“个人入出境旅游业务尚未完全恢复”情况下做出的计划之一。从目前的情况来看，依然是可行的。</p>
+  <p> 很多旅行社在这个五一假期迎来了“回血”，自4月开始，便不断有预订量暴涨、旅游产品售罄的消息传出。虽然有不少业者感叹“很久没有见到过这么火爆的假期了”，但是对市场持谨慎态度者仍在。一位旅行社经营者告诉记者，按照五一假期的走势，国内旅游业务或许可以在上半年就恢复到2019年同期水平，但受限于市场恢复时间较短，部分境外目的地签证仍然受限，资源配置恢复仍需时间，出境旅游业务的恢复需要更长的时间。</p>
+  <p> 中青旅近期在接受投资者调研时也表示，从旅行社业务来看，游客国内出行对旅行社的依赖程度有限，国内跟团游需求还是集中在中长线产品、具有特定资源的产品以及面向特定人群的产品，目前来看恢复情况变化不大。出境旅游市场预期良好，但目前尚未形成规模。</p>
+  <p> “现在，试点恢复旅行社经营中国公民赴有关国家出境团队旅游业务已经公布了两批名单，需要进一步有序恢复。此外，旅游成本也是需要考虑的问题。五一假期释放的旅游需求在一定程度上也会透支消费者未来一段时间的旅游花费，因此，他们会更加倾向成本更低的旅游产品。”北京联合大学旅游学院在线旅游研究中心主任杨彦锋认为。</p>
+  <p> “不过，出境旅游未来发展趋势会越来越好，‘一带一路’倡议在一定程度上会促进出境旅游发展。随着国际航班复航速度加快，机票价格回落，游客的出行意愿也会相应增强。”杨彦锋说。</p>
+  <p> 市场的逐步复苏，其实也给旅企提供了继续积蓄实力的时间。这几年，众信旅游一直在坚持数字化转型发展，提升全渠道分销能力。在对公司未来发展的展望中，该公司提出，出境旅游方面要引入国际交通、国际酒店等诸多上游资源，同步建设完成与飞猪系统间的签证通路，实现与更多热门目的地国家在线直签直连功能，强化自身核心优势，抢抓出境旅游市场的新机遇。</p>
+  <p> 虽然，拉动这3家传统旅企全年业绩的重要引擎究竟会出现在哪一刻目前还没有定论，但刚刚过去的五一假期旅游市场的表现，还是让业界对这几家上市公司第二季度的表现有了更大的期待。至少可以肯定的是，这几家充满韧劲的旅企，一直没有停下向前探索的脚步。 </p>
+ </body>
+</html><!--/enpcontent--><!--enpproperty <date>2023-05-11 00:00:00:0</date><author>王玮</author><subtitle></subtitle><introtitle></introtitle><keyword></keyword><paperarticleid>79745</paperarticleid><channel>1</channel><nodeid>0</nodeid><nodename></nodename><url>http://www.ctnews.com.cn/paper/content/202305/11/content_79745.html</url><urlpad>http://www.ctnews.com.cn/pad/content/202305/11/content_79745.html</urlpad><siteid>1</siteid><paperid>1</paperid><title>市场复苏，上市旅行社缓过来了吗？</title><liability></liability>/enpproperty-->
+					</founder-content>
+					</div>
+				</div>
+				<div class="detail-title mgt10 mgb25">
+					<span class="pull-left"><a href="content_79744.html">上一篇</a> </span>
+					<span class="pull-left mgl10"><a class=preart href="content_79746.html">下一篇</a> </span>
+
+					<div class="pull-right">
+						<a class="font-weight" onClick="zoomIn();" href="javascript:;">放大+</a>
+						&nbsp;<a class="font-weight" onClick="zoomOut();" href="javascript:;">缩小-</a>
+						&nbsp; <a class="font-weight" onClick="zoomDe();" href="javascript:;">默认<span class="font18">o</span></a>
+				
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+		<!--标准尾-->
+	 <div class="footer">
+             <div class="footer-nav">
+			
+            </div>
+			</div>
+           <div class="footer_sqd">
+            <span><a href="http://www.ctnews.com.cn/content/2020-02/11/content_71039.html" target="_blank">中国旅游报社简介</a> </span>
+	    <span class="mt16" >
+	    	<a href="#">国内统一刊号：CN11-0013 </a>|
+	    	<a href="#">邮发代号：1-40</a>| 
+	    	<a href="#">新闻热线：010-85168005</a>
+		</span>
+	    <span>中国互联网不良信息举报中心 中华人民共和国互联网新闻信息许可证 （国新网 许可证编号：1012006032）</span>
+	     <span>CopyRight by www.ctnews.com.cn　 京ICP备05019093号-4 <div style="display:none;"> <script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1278972842'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/z_stat.php%3Fid%3D1278972842%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script></div></span>
+        <span>版权所有 中国旅游报 中国 北京</span>
+	    <img src="../../../../../../amucsite/freePaper/pc/static/images/footer_nav_sqd.jpg" alt="" />
+	</div>
+        </div>
+	</div>
+	<!--标准尾end-->
+	
+	
+<table style="display:none;">
+<tr><td>
+
+<!--enpproperty
+<error><!--enpend --></error>
+<date>2023-05-11</date>
+<author>王玮</author>
+<subtitle></subtitle>
+<introtitle></introtitle>
+<keyword></keyword>
+<id>1</id>
+<nodeid>1</nodeid>
+<nodename>中国旅游报</nodename>
+<url>content_79745.html</url>
+<siteid>1</siteid>
+<title>市场复苏，上市旅行社缓过来了吗？</title> 
+/enpproperty-->
+
+</td></tr>
+</table>
+
+
+
+
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JjDZRJjPYur3koyI",ck: "JjDZRJjPYur3koyI"})</script>
+
+</body>
+</html>
