@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>稿件詳情</title>
+	</head>
+
+	<body>
+		<input type="hidden" id="DocIDforCount" name="DocIDforCount" value="118680367">
+		<script type="text/javascript" src="http://big5.china.com.cn//m.app.china.com.cn/app/template/amucsite/stat/jquery.min.js"></script>
+		<script type="text/javascript" src="http://big5.china.com.cn//m.app.china.com.cn/app/template/amucsite/common.js"></script>
+		<script type="text/javascript">
+					var xyUrl="//api.app.china.com.cn/app_if/";
+					var linkContent = "http://big5.china.com.cn/gate/big5/news.china.com.cn/2026-09/04/content_118680287.shtml";
+					var statCountClick="否"; 
+					 //WEB文章點擊數
+			        var xy_webClick = {
+			            //提交WEB文章點擊數--點擊事件
+			            commitEvent : function() {
+			       		 if (!xy_webClick.urlRoot) location.href=linkContent;
+			                //得到文章ID
+			                var aid = xy_webClick.getarticleID();
+			                if (!aid) return;
+			                
+			                var url = xy_webClick.urlRoot + "/event";
+			                var params = {
+			                    id : aid,
+			                    type : 0,
+			                    eventType : 0,
+			                    channel : 0
+			                }
+			                $.ajax({
+			                    url: url,
+			                    async:true,
+			                    dataType:"jsonp",
+			                    jsonp: 'jsoncallback',
+			                    cache: true,
+			                    data:params,
+			                    success: function (response) {
+			       			     location.href=linkContent;
+			                    }
+			                });
+			            },
+			            getarticleID : function() {
+			                if(document.getElementById("DocIDforCount")){
+			                    return document.getElementById("DocIDforCount").value;
+			                }
+			                else 
+			                {
+			                    var params = window.location.href;
+			                    
+			                    var start = params.lastIndexOf("_");
+			                    if (start < 0) return "";
+			                    
+			                    var end = params.lastIndexOf(".");
+			                    
+			                    if (end >= 0) {
+			                        var id = params.substring(start+1,end);
+			                        return id;
+			                    } else {
+			                        return "";
+			                    }
+			                }
+			            }
+			        }
+			        if(statCountClick=='是'){
+						xy_webClick.urlRoot=xyUrl;  //外網api根地址
+						xy_webClick.commitEvent();
+					}else{
+						 location.href = linkContent;
+					}
+		</script>
+	</body>
+
+</html>

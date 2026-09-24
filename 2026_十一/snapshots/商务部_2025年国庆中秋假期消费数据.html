@@ -1,0 +1,102 @@
+<!--
+ * @Descripttion: Do not edit
+ * @version: 0.1.0
+ * @Author: LMLD-dl
+ * @Date: 2021-09-06 09:45:09
+ * @LastEditors: LMLD-DL
+ * @LastEditTime: 2021-09-16 13:46:17
+-->
+<!DOCTYPE html>
+<!--[if lte IE 9]> <html class="ltie9"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!-->
+<html>
+	<!--<![endif]-->
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>国庆中秋假期消费市场人气旺亮点多</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+		/>
+		<base href="/ecps/" />
+		<link rel="stylesheet" href="static/phone/css/reset.css" />
+		<link rel="stylesheet" href="static/phone/css/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="static/phone/css/index.css" />
+		<link rel="stylesheet" href="static/phone/css/exhibition.css" />
+	</head>
+
+	<body>
+		<!-- nav begin -->
+		<div id="header"></div>
+		<!-- nav end -->
+
+		<!-- 文章页 begin -->
+		<div class="bread-crumb">
+			<input type="hidden" value="" id="paperfilePath"/>
+			<span>当前位置：</span><a href="/m_index.html">首页</a><span class="arrow">&gt;</span><span>电商新闻</span>
+		</div>
+		<article class="article-wrap">
+			<h1>国庆中秋假期消费市场人气旺亮点多</h1>
+			<div class="source">
+				<p>
+					文章来源：
+					新华社
+				</p>
+				<p>
+					发布时间：
+					2025-10-09 13:54
+				</p>
+			</div>
+			<div id="paperVideo" style="margin: 5px auto;display:none;"></div>
+			<div class="article-box">
+				<p>　　新华社北京10月8日电（记者谢希瑶）据商务部商务大数据监测，国庆中秋假期全国重点零售和餐饮企业销售额按可比口径同比增长2.7%。10月1日至7日，商务部重点监测的78个步行街（商圈）客流量、营业额同比分别增长8.8%和6.0%。</p>
+
+<p>　　绿色、智能、国潮消费亮点突出。商务部监测的主要电商平台数据显示，节日期间绿色有机食品销售额同比增长27.9%，智能家居产品同比增长14.3%，国潮服装同比增长14.1%。商家推出低油、低糖月饼，受到消费者青睐。</p>
+
+<p>　　服务消费热度攀升。一批优秀国产影片带动观影热潮，截至10月8日15时，国庆档电影票房超17.9亿元。多项体育赛事掀起观赛热潮，各地开设集美食、文创与特色商品为一体的观赛&ldquo;第二现场&rdquo;，将赛事热度延伸至消费端。</p>
+
+			</div>
+          <div class="article-box">
+			
+		</div>
+
+		</article>
+		<!-- 文章页 end -->
+
+		<!-- footer-box begin -->
+		<div id="footer"></div>
+		<!-- footer-box end -->
+
+		<script src="static/phone/js/edi.jq.min.js"></script>
+		<script src="static/phone/js/swiper-bundle.min.js"></script>
+		<script src="static/phone/js/echarts.min.js"></script>
+		<script src="static/phone/js/common.js"></script>
+		<script src="static/phone/js/app.js"></script>
+		<script src="https://unpkg.byted-static.com/xgplayer/2.31.2/browser/index.js" type="text/javascript"></script>
+		<script>
+			$('#header').load('static/m_header.html');
+			$('#footer').load('static/m_footer.html');
+
+			if ($("#paperfilePath").val() != "")
+			{
+				let player = new Player({
+					"id": "paperVideo",
+					"url": $("#paperfilePath").val(),
+					"playsinline": true,
+					"whitelist": [
+							""
+					],
+					"width": null,
+					"height": null,
+					"autoplay": true,
+					"playbackRate": [0.5,1,1.5,2]
+				  });
+				$("#paperVideo").css("display","block");	
+			}
+		</script>
+	</body>
+</html>
