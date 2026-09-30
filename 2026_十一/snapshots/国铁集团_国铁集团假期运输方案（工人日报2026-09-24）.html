@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<a href=/_raylink></a>
+<head>
+	<!--包含通用样式-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta name="robots" content="all">
+	<title>工人日报-中工网</title>
+	<meta name="author" content="工人日报"/>
+	<meta name="filetype" content="0" />
+	<meta name="publishedtype" content="1" />
+	<meta name="pagetype" content="2" />
+	<meta name="catalogs" content="grrb"/>
+	<link rel="stylesheet" href="/papers/paper/css/jquery-ui.theme.min.css">
+	<link rel="stylesheet" href="/papers/paper/css/papers.css">
+	<LINK rel=stylesheet href="/papers/paper/css/japp_tabbar.css">
+		<script type="text/javascript" src="/papers/paper/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="/papers/paper/js/jquery-ui.min.js" charset="utf-8"></script>
+	<script src="/papers/paper/js/hammer.min.js"></script>
+	<script type="text/javascript" src="/papers/paper/js/paper.js?v=20220801" charset="utf-8"></script>
+	<script type="text/javascript" src="/papers/paper/js/jquery.xdomainrequest.min.js"></script>
+	<script type="text/javascript" src="//res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+	<script>
+		const PAPE_NAME="grrb";
+		const PAPER_DATE="2026-09-24";
+		const PAPER_TITLE="工人日报";
+		$(function ($) {
+			loadInit();
+		});
+	</script>
+</head>
+
+<body>
+
+</body>
+<div class="header">
+	<div class="head">
+		<h1 class="logo"><a href="/"><img alt="中工娱乐" src="/resources/images/logo.png"></A></h1>
+		<!--#include virtual="/include/template/search.shtml"-->
+		<div class="mobile">
+			<span class="grrb"><a href="/" target="_blank"><img src="/resources/images/grrb.gif"></a></span>
+			<span class="navigate"></span>
+			<span class="sort"></span>
+		</div>
+		<div id="nav" class="nav">
+		<ul>
+			<li class="nav-item" id="000001000011"><a href="/xuexi/">学习</a></li>
+			<li class="nav-item" id="000090000001"><a href="/news/">时政</a></li>
+			<li class="nav-item" id="000001000009"><a href="/quanzong/">全总</a></li>
+			<li class="nav-item" id="000080000001"><a href="/acftu/">工会</a></li>
+			<li class="nav-item" id="000082000001"><a href="/theory/">理论</a></li>
+			<li class="nav-item" id="000074000007"><a href="/pl/pl/">评论</a></li>
+			<li class="nav-item" id="000081000001"><a href="/right/">权益</a></li>
+			<li class="nav-item" id="000077000001"><a href="/finance/">经济</a></li>
+			<li class="nav-item" id="000076000001"><a href="/society/">民生</a></li>
+			<li class="nav-item" id="000094000005"><a href="/zgtv/">视频</a></li>
+			<li class="nav-item" id="000075000001"><a href="/military/">军事</a></li>
+			<li class="nav-item" id="000091000001"><a href="/world/">国际</a></li>
+			<li id="dropdown">
+			更多
+			<i></i>
+			<ul class="navmore">
+				<li class="nav-item" id="000083000004"><a href="/character/">人物</a></li>
+				<li class="nav-item" id="000087000001"><a href="/ent/">文旅</a></li>
+				<li class="nav-item" id="000001000006"><a href="/kandian/">看点</a></li>
+				<li class="nav-item" id="000001000031"><a href="/kankan/">快看</a></li>
+				<li class="nav-item" id="000001000002"><a href="/zhibo/">直播</a></li>
+				<li class="nav-item" id="000085000001"><a href="/sports/">体育</a></li>
+				<li class="nav-item" id="000001000010"><a href="/health/">健康</a></li>
+				<li class="nav-item" id="000093000001"><a href="/edu/">科教</a></li>
+				<li class="nav-item" id="000001000013"><a href="/zhuanti/">专题</a></li>
+				<li class="nav-item" id="000001000029"><a href="/zhuanlan/">专栏</a></li>
+				<li class="nav-item" id="000001000008"><a href="/gongshi/">工事</a></li>
+			  	<li class="nav-item" id="000001000021"><a href="/tingting/">畅听</a></li>
+				<!-- <li class="nav-item" id="000092000001"><a href="/job/">就业</a></li>
+				<li class="nav-item" id="000078000001"><a href="/firm/">企业</a></li>
+				<li class="nav-item" id="000055000001"><a href="/auto/">汽车</a></li>
+				<li class="nav-item" id="000001000007"><a href="/gongyi/">公益</a></li>
+				<li class="nav-item" id="000079000001"><a href="/tour/">旅游</a></li>
+				<li class="nav-item" id="000001000001"><a href="/roll/">滚动</a></li> -->
+				<!--<li class="nav-item" id="000016000001"><a href="/tianjin/">天津</a></li>
+				<li class="nav-item" id="000011000001"><a href="/hebei/">河北</a></li>
+				<li class="nav-item" id="000018000001"><a href="/neimg/">内蒙古</a></li>				
+				<li class="nav-item" id="000012000001"><a href="/anhui/">安徽</a></li>			
+				<li class="nav-item" id="000030000002"><a href="/shandong/">山东</a></li>
+				<li class="nav-item" id="000017000001"><a href="/henan/">河南</a></li>
+			  	<li class="nav-item" id="000018"><a href="/hainan/">海南</a></li>
+				<li class="nav-item" id="000015000001"><a href="/chongqing/">重庆</a></li>
+				<li class="nav-item" id="000021000001"><a href="/guizhou/">贵州</a></li>
+				<li class="nav-item" id="000049000001"><a href="/xizang/">西藏</a></li>
+				<li class="nav-item" id="000013000001"><a href="/jiaodong/">胶东</a></li>
+				<li class="nav-item" id="000015"><a href="/hd/">投票</a></li>-->
+			</ul>
+			</li>
+		</ul>
+		</div>
+	</div>
+</div>
+<script>
+	var ww = $(window).width();
+	if (ww <= 750) {
+	} else {
+		$("#dropdown").click(function () {
+			$(this).toggleClass("down1");
+		});
+	}
+</script>
+
+<div class="top1a">
+    <div class="container">
+        <div class="share" style="float: right;"></div>
+	<div class="date">工人日报 <span id="fulldate">2026年09月24日</span> <span id="week">星期一</span> <img class="wqhg" src="/sites/paper/images/down.png"></div>
+    </div>
+</div>
+<div class="top2">
+    <div class="container">
+        <div class="right"><a id="lastIssue" href="/papers/grrb/2026/09/23/1/page.html">&lt;上一期</a><a id="nextIssue" href="/papers/grrb/2026/09/25/1/page.html">下一期&gt;</a></div>
+    </div>
+</div>
+
+<div class="left">
+    <div class="img">
+        <map id="PagePicMap" name="PagePicMap">
+            <area shape="poly" coords="315.6689343,74.66666832,315.6689343,22.66666848,2.00212836,22.66666848,2.00212836,74.66666832,2.00212836,232.00000164,315.6689343,232.00000164" href="/papers/grrb/2026/09/24/3/news-1.html">
+            <area shape="poly" coords="421.1143697,57.33333504,421.1143697,20.66666472,320.34056714,20.66666472,320.34056714,57.33333504,320.34056714,145.33333524,421.1143697,145.33333524" href="/papers/grrb/2026/09/24/3/news-2.html">
+            <area shape="poly" coords="421.1143697,186.66666468,421.1143697,150.00000048,320.34056714,150.00000048,320.34056714,186.66666468,320.34056714,259.9999992,421.1143697,259.9999992" href="/papers/grrb/2026/09/24/3/news-3.html">
+            <area shape="poly" coords="82.0872712,236.66666688,315.6689343,236.66666688,315.6689343,395.99999784,82.0872712,395.99999784" href="/papers/grrb/2026/09/24/3/news-4.html">
+            <area shape="poly" coords="2.00212836,241.33333212,77.41563836,241.33333212,77.41563836,395.99999784,2.00212836,395.99999784" href="/papers/grrb/2026/09/24/3/news-5.html">
+            <area shape="poly" coords="421.1143697,291.33333432,421.1143697,259.33333536,320.34056714,259.33333536,320.34056714,291.33333432,320.34056714,369.33333408,421.1143697,369.33333408" href="/papers/grrb/2026/09/24/3/news-6.html">
+            <area shape="poly" coords="421.78174582,411.99999732,421.78174582,384.66666972,321.00794326,384.66666972,321.00794326,411.99999732,321.00794326,489.99999708,421.78174582,489.99999708" href="/papers/grrb/2026/09/24/3/news-7.html">
+            <area shape="poly" coords="314.33418206,441.99999864,314.33418206,399.3333354,0.66737612,399.3333354,0.66737612,441.99999864,0.66737612,504.66666888,314.33418206,504.66666888" href="/papers/grrb/2026/09/24/3/news-8.html">
+            <area shape="poly" coords="421.1143697,509.99999796,421.1143697,488.6666694,320.34056714,488.6666694,320.34056714,509.99999796,320.34056714,607.9999986,421.1143697,607.9999986" href="/papers/grrb/2026/09/24/3/news-9.html">
+            <area shape="poly" coords="5.33900896,509.33333412,312.99942982,509.33333412,312.99942982,602.66666952,5.33900896,602.66666952" href="/papers/grrb/2026/09/24/3/news-10.html">
+        </map>
+        <img src="/papers/grrb/2026/09/24/3/bfile_1716269_b81a4756d248269da9d8e1baf7c0edfb_1.jpg" id="PageImage" usemap="#PagePicMap" width="420" height="609">
+    </div>
+
+    <div class="ban">
+        <ul>
+            <li id="edNum"><a href="/papers/grrb/2026/09/24/3/page.html">03版</a></li>
+            <li class="pdf"><a id="pdfDownLoad" href="/papers/grrb/2026/09/24/3/grrb202609243.pdf" target="_blank">PDF版下载</a></li>
+            <li class="prev"><a id="preEdition" href="/papers/grrb/2026/09/24/2/page.html">上一版</a></li>
+            <li class="next"><a id="nextEdition" href="/papers/grrb/2026/09/24/4/page.html">下一版</a></li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <div class="content">
+    <h1 class="pretitle" id="pretitle"></h1>
+    <h1 class="ctitle" id="ctitle">铁路中秋国庆假期运输启动</h1>
+    <h1 class="subtitle" id="subtitle">预计发送旅客2.84亿人次</h1>
+    <div class="signdate">
+        <div class="editor" id="editor"></div>
+        <div class="lai" id="lai">《工人日报》（2026年09月24日 03版）</div>
+    </div>
+    <div>
+        <div id="imgs" class="imgs">
+        </div>
+        <div id="ccontent" class="ccontent">
+            <p>    本报北京9月23日电（记者刘静）记者今天从中国国家铁路集团有限公司（以下简称国铁集团）获悉，铁路中秋国庆假期运输9月23日启动，至10月8日结束，为期16天，全国铁路预计发送旅客2.84亿人次，10月1日将迎来铁路客流最高峰。</p><p>    国铁集团客运部负责人介绍，今年中秋国庆双节假期相邻，旅游、探亲、休闲等出行需求旺盛，中秋短途客流与国庆长途客流交织叠加，铁路客流将保持高位运行，部分区间和时段客流高度集中。截至今日8时，铁路12306已累计发售中秋国庆假期运输车票9621万张。从车票预售情况看，热门出发城市主要有北京、广州、上海、深圳、杭州、成都、南京、郑州、武汉、苏州；热门到达城市主要有北京、上海、广州、杭州、成都、郑州、南京、武汉、西安、长沙。</p><p>    假期运输期间，全国铁路将实行高峰运行图，日均计划开行旅客列车约1.3万列。同时，将定制化开行“歌迷专列”“球迷专列”，拓展假日消费新场景，助力旅游经济发展。</p>
+        </div>
+    </div>
+    <ul class="nav1">
+        <li class="prev"><a id="prev" href="/papers/grrb/2026/09/24/3/news-2.html">上一篇</a></li>
+        <li class="next"><a id="next" href="/papers/grrb/2026/09/24/3/news-4.html">下一篇</a></li>
+    </ul>
+</div>
+</div>
+<script src="/papers/paper/js/mobile.js"></script>
+<script src="/papers/paper/js/jwx_forpaper.js"></script>
+<div class="foot-03">
+	<a href="/c/2022-07-14/7100201.shtml" target="_blank">关于中工网</a> |
+	<a href="/c/2022-07-14/7100204.shtml" target="_blank">版权声明 </a>| 违法和不良信息举报电话：010-84151598 | 网络敲诈和有偿删帖举报电话：010-84151598<br>Copyright © 2008-2026 by www.workercn.cn. all rights reserved
+</div>
+<div class="floatewm">
+	扫码关注
+	<br><br> 中工网微信
+	<br>
+	<img border="0" src="/resources/images/20200820111404252458527.jpg" width="82">
+	<br><br> 中工网微博
+	<br>
+	<img border="0" src="/resources/images/20200820111547076159099.png" width="82">
+	<br><br> 中工网抖音
+	<br>
+	<img border="0" src="/resources/images/20200820112207598310620.jpg" width="82">
+	<br><br> 工人日报
+	<br> 客户端
+	<br>
+	<img src="/resources/images/20200514151943278374417.jpg" width="82">
+	<i onclick="$('.floatewm').hide();">×</i>
+</div>
+<script src="/papers/paper/js/jquery.wyshare.js?_=20251121"></script>
+<script src="/papers/paper/js/all_content.js" language="javascript" type="text/javascript"></script>
+<script>
+	(function (w, d, g, r) {
+		w['_wd_o'] = r;
+		w[r] = w[r] || function () { arguments.t = 1 * new Date(), (w[r].q = w[r].q || []).push(arguments); };
+		var a = d.createElement('script'), m = d.getElementsByTagName('script')[0];
+		a.async = 1;
+		a.src = g; m.parentNode.insertBefore(a, m);
+	})(window, document, '//cl3.webterren.com/webdig.js?z=34', '_wa');
+	_wa('wd_paramtracker', '_wdxid=000000000000000000000000000000000000000000'); 
+</script>
+<SCRIPT src="/papers/paper/js/japp_tabbar.js?_=20251121"></SCRIPT>
+
+</html>
+
