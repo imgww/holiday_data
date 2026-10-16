@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	
+	<title>春节自驾游：走一段文化富足的旅程</title>
+
+	<meta name="Keywords" content=""/>
+	<meta name="Description" content=""/>
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta name="" content=""/>
+	<link rel="stylesheet" type="text/css" href="../../../../../../amucsite/freePaper/pc/static/css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="../../../../../../amucsite/freePaper/pc/static/css/css.css"/>
+	<link rel="stylesheet" type="text/css" href="../../../../../../amucsite/freePaper/pc/static/css/calendar.css"/>
+	<script src="../../../../../../amucsite/freePaper/pc/static/js/jquery-1.6.4.min.js" type="text/javascript"></script>
+	<script src="../../../../../../amucsite/freePaper/pc/static/js/index.js" type="text/javascript" charset="utf-8"></script>
+       <style>
+    /*尾部*/
+.footer {
+       margin-top: 25px;
+    overflow: hidden;
+    width: 100%;
+    margin: 20px auto;
+    padding-top: 20px;
+}
+.footer-nav {
+    height: 40px;
+    line-height: 40px;
+    background-color: #26a0d3;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.foot-nav__head{
+    color: #fff;
+    margin-right: 40px;
+}
+
+.foot-nav__body, .foot-nav__head{
+    float: left;
+}
+
+.foot-nav__body{
+    font-size: 0;
+}
+.foot-nav__item{
+    display: inline-block;
+    margin-right: 10px;
+    padding-top: 7px;
+}
+.copyright {
+    padding: 15px 0 10px;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+	<div class="header">
+		<div class="blueLine">
+			<div class="wrap">
+				<img class="logo1 pull-left" src="../../../../../../amucsite/freePaper/pc/static/images/13.png" alt="" />
+				<ul class="pull-right">
+					<li class="pull-left"><a href="#">第一新闻</a></li>
+					<li class="pull-left"><a href="#">民生</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="header-mid">
+			<div class="wrap">
+				 <a href="//www.ctnews.com.cn/index.html" target="_blank"><img class="logo" width="325px" height="58px" class="pull-left mgt6" src="//www.ctnews.com.cn/images/logo.png" alt="" style="display:block;float:right"></a>	
+				<div class="pull-right">
+					 
+						 <div class="header-time pull-right" id="week" style="margin-left:6px;"></div>
+						<div class="header-time pull-right" id="paperdate">2024年02月01日</div>
+
+					<div style="clear: both;"></div>
+					<img src="../../../../../../amucsite/freePaper/pc/static/images/18.png" alt="" style="display:none" />
+				</div>
+			</div>
+		</div>
+		<div class="header-bottom"></div>
+	</div>
+	<div class="wrap">
+		<div class="nav">
+				<span class="pull-left dateTime" style="margin-top:10px;">
+				 
+				  
+				 	<span class="paperName" >日期：</span>
+				 	2024年02月01日
+
+
+			</span>	
+			<form name="form1" action="http://www.ctnews.com.cn:8088/founder/SearchServlet.do"  method="POST" style="" class="" target="_blank">
+		  <div class="pull-left" style="margin-left:50px;margin-top:10px;">
+				<input name="content" id="content"  type="text" size="20" maxlength="50">
+				<input type="submit" value="搜索" name="search" class="searchBtn"> 
+				
+				<input type="hidden" name="op" value="single">
+				<input type="hidden" name="siteID" value="">
+				
+				<input type="hidden" id="publishate" value="2024-02-01">
+				<input type="hidden" id="publishCate" value="2024/02/01">
+
+		  </div>	
+			</form>
+			
+			<span class="pull-right" style="margin-top:10px;" >
+				<span><a href="javascript:void(0)" id="go_PrePeriod" onclick="go_prePaper();" >&lt;&nbsp;上一期</a>&nbsp;&nbsp;<a id="go_NextPeriod" href="javascript:void(0)" onclick="go_nextPaper();"  >下一期&nbsp;&gt;</a></span>
+			</span>
+
+		<script language="javascript">
+
+
+function formatlong(dat){
+
+    //获取年月日，时间
+    var year = dat.getFullYear();
+    var mon = (dat.getMonth()+1) < 10 ? "0"+(dat.getMonth()+1) : dat.getMonth()+1;
+    var data = dat.getDate()  < 10 ? "0"+(dat.getDate()) : dat.getDate();
+/*    var hour = dat.getHours()  < 10 ? "0"+(dat.getHours()) : dat.getHours();
+    var min =  dat.getMinutes()  < 10 ? "0"+(dat.getMinutes()) : dat.getMinutes();
+    var seon = dat.getSeconds() < 10 ? "0"+(dat.getSeconds()) : dat.getSeconds();
+  */               
+    var newDate = year +"-"+ mon +"-"+ data/* +" "+ hour +":"+ min +":"+ seon*/;
+    return newDate;
+}
+
+
+
+			var myDate = new Date();
+	
+			if (document.getElementById('publishate').value==formatlong(myDate))
+				document.getElementById('go_NextPeriod').style.display="none";
+			
+			if (document.getElementById('publishCate').value=="2018/01/01")
+				document.getElementById('go_PrePeriod').style.display="none";
+			
+
+			function getDate(strDate){
+				  var date = eval('new Date(' + strDate.replace(/\d+(?=-[^-]+$)/, 
+				   function (a) { return parseInt(a, 10) - 1; }).match(/\d+/g) + ')');
+				  return date;
+			}
+
+			Date.prototype.Format = function (fmt) { //author: meizz 
+			var o = {
+				"M+": this.getMonth() + 1, //月份 
+				"d+": this.getDate(), //日 
+				"h+": this.getHours(), //小时 
+				"m+": this.getMinutes(), //分 
+				"s+": this.getSeconds(), //秒 
+				"q+": Math.floor((this.getMonth() + 3) / 3), //季度 
+				"S": this.getMilliseconds() //毫秒 
+			};
+			if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+			for (var k in o)
+			if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+			return fmt;
+		}
+
+			function preDate(Currdate){
+				curr_date=Currdate;
+				pre_paperDate=curr_date.setDate(curr_date.getDate()-1);
+				pre_paperDate=new Date(pre_paperDate);
+				return pre_paperDate;
+				}
+	
+			function next_Date(Currdate){
+				curr_date=Currdate;
+				pre_paperDate=curr_date.setDate(curr_date.getDate()+1);
+				pre_paperDate=new Date(pre_paperDate);
+				return pre_paperDate;
+				}
+
+			function go_prePaper(){
+				p_date=getDate(document.getElementById('publishate').value);
+				p_date=preDate(p_date);				
+				if ((p_date.getDay()==0) || (p_date.getDay()==6))
+					p_date=preDate(p_date);
+				if ((p_date.getDay()==0) || (p_date.getDay()==6))
+					p_date=preDate(p_date);
+
+				str_Date=p_date.Format('yyyy-MM-dd');
+				a_Date=str_Date.split('-');
+				strUrl="//www.ctnews.com.cn/paper/"+a_Date[0]+a_Date[1]+'/'+a_Date[2]+"/node_01.html";
+				window.location.href=strUrl;	
+				}
+
+			function go_nextPaper(){
+				p_date=getDate(document.getElementById('publishate').value);
+				p_date=next_Date(p_date);					
+				if ((p_date.getDay()==0) || (p_date.getDay()==6))
+					p_date=next_Date(p_date);
+				if ((p_date.getDay()==0) || (p_date.getDay()==6))
+					p_date=next_Date(p_date);
+
+				str_Date=p_date.Format('yyyy-MM-dd');
+				a_Date=str_Date.split('-');
+				strUrl="//www.ctnews.com.cn/paper/"+a_Date[0]+a_Date[1]+'/'+a_Date[2]+"/node_01.html";
+				window.location.href=strUrl;			
+				}
+
+		</script>
+
+		</div>
+
+
+		<div class="content clearfix">
+			<div class="newspaper-pic pull-left">
+				
+				<img class="preview" src="../../../pic/202402/01/bf3ac804-1c28-4275-92b4-73f7ae1e4b7c.jpg.2"  USEMAP=#PagePicMap>
+				<MAP NAME="PagePicMap"><Area coords="280.46445054,33.71283641,405.84855681,33.71283641,405.84855681,559.89752321,280.46445054,559.89752321" shape="polygon" href="content_87885.html"><Area coords="11.21857602,34.373874719999996,272.54545373999997,34.373874719999996,272.54545373999997,335.14527265,11.21857602,335.14527265" shape="polygon" href="content_87886.html"><Area coords="11.21857602,347.70495358,272.54545373999997,347.70495358,272.54545373999997,559.89752321,11.21857602,559.89752321" shape="polygon" href="content_87887.html"></MAP>
+				<div class="mgb25">
+					<div class="pull-left">
+						<span id="layout">第06版：<span class="font-weight">旅游报06版</span></span>
+					</div>
+					<div class="pull-right">
+						<span><a class="preart" href="../../../202402/01/node_05.html">上一版</a> </span>
+						<span><a class="nextArt" href="../../../202402/01/node_07.html">下一版</a> </span>
+						<a href="../../../att/202402/01/e2a162ba-1d0c-4145-a2e4-db44907001ad.pdf" download><img class="pull-right mgl8" src="../../../../../../amucsite/freePaper/pc/static/images/09.png"></a>
+					</div>
+					
+					
+				</div>
+			</div>
+			<div class="detail pull-left">
+				<div class="detail-title">
+                	<span class="pull-left"><a href="http://www.ctnews.com.cn/paper/">首页</a></span>
+                	<span class="pull-left mgl10"><a href="javascript:history.back();">返回上一级</a></span>
+					<span class="pull-left mgl10"><a href="content_87885.html">上一篇</a> </span>
+					<span class="pull-left mgl10"><a class=preart href="content_87887.html">下一篇</a> </span>
+					
+
+					<div class="pull-right">
+						<a class="font-weight" onClick="zoomIn();" href="javascript:;">放大+</a>
+						&nbsp;<a class="font-weight" onClick="zoomOut();" href="javascript:;">缩小-</a>
+						&nbsp; <a class="font-weight" onClick="zoomDe();" href="javascript:;">默认<span class="font18">o</span></a>
+					</div>
+					  
+				</div>
+				<div class="detail-art">
+					 
+					 <p class="introtitle text-center" id="PreTitle"></p> 
+                     <h2 id="Title" class="art-title text-center">春节自驾游：走一段文化富足的旅程</h2> 
+                     <p class="subtitle text-center"  id="SubTitle"></p>
+						<div class="attachment" align="center">
+						<!--高级资源列表-->
+						</div>
+					<div id=ozoom style="zoom:100%;" class="content">
+					<founder-content>
+						<!--enpcontent--><html>
+ <head></head>
+ <body>
+  <p> </p>
+  <p> □ 本报记者 张 宇</p>
+  <p> </p>
+  <p> “春运40天内预计有90亿人次出游、探亲、休闲等。今年春运发生了结构性变化，传统营业性运输，包括铁路、公路、民航、水运客运出行人次预计大概是18亿人次，其余80%将是自驾车出行。”这是在国务院新闻办公室日前就2024年春运形势及工作安排召开的新闻发布会上公布的一组数据。惊人的自驾车出行量给自驾游市场提供了足够大的出游空间</p>
+  <p> </p>
+  <p> 周边长途双轮驱动</p>
+  <p> </p>
+  <p> “从我们协会成员目前的预订情况来看，今年春节假期的自驾游热度持续攀升，呈现出周边自驾游、长途自驾游双轮驱动的特点。”中国旅行社协会自驾与定制旅行分会执行会长、上海金东文旅科技集团总裁夏晗告诉记者，长途自驾的方向主要是气候比较温暖的云南、广西、海南等地。</p>
+  <p> 来自在线旅游企业的数据也印证了夏晗的判断。马蜂窝数据显示，自1月起，春节自驾游相关热度就开始不断上涨，截至目前，国内自驾游热度涨幅已超195％，境外自驾游热度增长达123％。携程租车订单显示，截至目前，春运期间国内租车订单同比增长近六成。春节假期，租车订单同比增长超3倍。租租车数据显示，截至目前，国内租车订单同比增长18.3％，国际租车订单同比增长365％。</p>
+  <p> 途牛数据显示，自由、私密、安全等优势，使自驾游受到更多家庭客群的青睐，亲子家庭成为春节自驾游的消费主力，出游人次占比接近48％。用户年龄方面，以中青年用户为主，其中，26－35岁和36－45岁的用户出游人次占比分别达到了35％和39％。超过80％的自驾游用户选择了本地游或周边游。</p>
+  <p> “一线、新一线都市青年仍是自驾游的主要客群，占比达84％。今年春节，长线自驾游热度持续上涨，选择游玩9－14天的游客占比20％，同比增长8％。”马蜂窝旅游研究院院长冯饶介绍，小众新玩法、文化体验类项目成为今年春节自驾游的核心关键词，游客更青睐个性化、沉浸式的在地体验。年俗体验、温泉度假、探访夜市等成为今年春节期间热度最高的自驾游新玩法。</p>
+  <p> “就目前预订情况来看，黄山市春节期间的自驾游市场比较乐观。一个最为明显的趋势就是奔着徽州的年节活动及非遗而来。”安徽省自驾车旅游服务中心有限公司董事长周晓国告诉记者，黄山市准备了丰富多彩的非遗表演，比如歙县的板凳龙、大刀舞、叠罗汉，宏村的花灯、闹灯会，还有徽州区、休宁县和祁门县的舞草龙、长凳龙等，很受游客欢迎。</p>
+  <p> “从春秋旅游目前的预订情况来看，周边自驾游主要以‘酒店+景点+当地特色体验’为主，多集中于初二、初三后出发，两晚的连住套餐最受欢迎。”春秋旅游副总经理周卫红向记者分享了他们的数据，“长途自驾游方面，多表现为‘高铁或飞机+自驾’组合式出游。许多家庭会考虑到节假日期间长途公路交通拥堵情况，而偏向于选择先乘坐高铁或飞机到达目的地，再在当地租车游玩。”</p>
+  <p> </p>
+  <p> 产品多元供给丰富</p>
+  <p> </p>
+  <p> 采访中，记者了解到，对于今年自驾出游的高需求，在线企业及传统旅行社企业也根据各自优势进行了提前布局。市场产品供给丰富，满足了游客多元化的出游需求。</p>
+  <p> 携程、租租车及马蜂窝等企业推出了多样化的租车优惠。携程针对春节市场，推出了租车大额优惠券包及“春节早鸟”活动，上线VR360全景看车，方便用户在线选择，提高租车体验。租租车针对春节自驾市场推出了“自驾天下”优惠活动，联合支付宝及多地文化和旅游部门一起上线了全球自驾地图，为自驾游爱好者提供详尽的官方自驾攻略。马蜂窝按照目的地、时间，推出了多种自驾线路与自驾玩法，为用户自驾出游提供更多参考。</p>
+  <p> “得益于全品类动态打包系统带来的灵活、个性的预订体验，我们将布局重点放在了‘酒店+门票’上，针对自驾游群体推出了更多碎片化的产品。”途牛旅游相关负责人介绍道，比如广州长隆、珠海长隆酒店自驾游套餐，北京环球度假区自驾游套餐，上海迪士尼2－4日自驾游套餐等。</p>
+  <p> 根据上海游客的自驾出游特点及目的地偏好，春秋旅游在杭州、苏州、昆山、乌镇、湖州、无锡等地精选了一批酒店套餐。“考虑到不同家庭出游需求，我们还对酒店套餐进行了进一步的细化，如有的套餐里不仅会含免费停车，还会含‘早+晚’餐饮，或者会含周边景点门票、温泉体验等。”周卫红介绍道。</p>
+  <p> “针对今年春节市场，我们进行了提前谋划，早在去年12月初就围绕‘中国年徽州味’推出了多款产品，比如，‘黟游未尽·乡聚过年——邀您做客黟县过大年’‘中国年 歙县味——2024年第五届歙县过大年自驾游活动’等。”周晓国介绍，“今年黄山主推非遗过大年，所以我们的产品也是围绕这一主题展开，市场反响热烈。”</p>
+  <p> 夏晗告诉记者，针对今年的春节市场，他们在常规行程的基础上加入了更多的民俗体验和传统文化体验，改传统酒店住宿为高端“名”宿住宿，团队体量从大车队控制在精品小车队。此外，他们还为每个团队配备旅拍团队，为游客提供更专业的拍摄服务。</p>
+  <p> “以去年非常火热的目的地云南为例，我们在今年推出的‘版纳7日游’产品中加入了访问傣族原始村寨、学习制作傣家银饰、采摘普洱老茶等项目。在‘边境传奇·翁丁老寨8日游’产品中加入了爱国主义教育体验、金三角知识普及，以及体验傈僳族、傣族、佤族民俗文化等。”夏晗介绍。</p>
+  <p> </p>
+  <p> 热度持续看好全年</p>
+  <p> </p>
+  <p> 采访中，谈及对今年整个自驾游市场的热度预期，业者都给出了积极的判断，并表示，在高热度的基础上，2024年，自驾游市场会进一步下沉，呈现出小区域多点开花的态势，而业者们也将在自驾游方面做更多的布局。</p>
+  <p> “传统的川藏线及新疆仍将是热点，哈尔滨的爆火给东北地区带来巨大的流量，将带动以黑龙江、大兴安岭和呼伦贝尔为主线的自驾游市场，预计在夏秋季会有一个持续的火爆。”</p>
+  <p> 谈到未来布局，夏晗认为，首先会在线路中加入更多的人文体验类项目，其次会加强社交媒体的营销力度。“从协会层面，我们也在积极推动自驾游领队标准的出台，以此来促进这一行业更加健康规范地发展。”</p>
+  <p> “自驾旅程中，住宿条件及附近是否有适合自驾游人群的文体活动是影响自驾游受众评价的重要因素。我们除了会继续在各大社交平台上更新各地自驾游深度攻略外，也会为自驾游受众提供更多碎片化的服务，包括优质住宿资源，具有目的地特色的文博、娱乐资源，让游客的选择更丰富。”周卫红告诉记者，“节假日自驾游旺季中，我们也会适当在热门目的地提前投放一部分车辆并做好相应服务。”</p>
+  <p> “今年，自驾游热潮仍将主要分布在春节、暑期和国庆假期，深度体验在地人文将是自驾游的新趋势，而自驾游线路也将进一步下沉，深入到区县乡镇以及小众目的地。走别人没走过的路、体验别人没体验过的新玩法，是年轻人自驾游的新方向。此外，长线自驾游与境外自驾游，将迎来新的增长。未来，马蜂窝会针对不同类型的车辆推出更具差异化的自驾线路。”冯饶说。</p>
+  <p> “今年国内自驾游会保持一个稳中有增的趋势。出境游方面会持续向着疫情前水平恢复。”租租车相关负责人分析道，“从淄博、哈尔滨的例子可以看出，今年的自驾游市场在黄金周、寒暑假的基础上，还将会跟随更多的旅游热点产生区域性的高潮，例如春天即将到来，大理、无锡、武汉等地的赏花游仍将是热门产品。出境游方面，今年夏天的欧洲杯和巴黎奥运会，将促进欧洲自驾游的快速增长。今年租租车将会更加关注欧洲、中东和东南亚地区自驾游推广，尤其是共建‘一带一路’国家，未来也将围绕这些目的地进行布局。”</p>
+  <p> 携程更关注便捷与环保，今年，携程租车一方面会加大新能源车辆资源的投入，另一方面将开通自助取还功能，为用户提供更为便捷高效的取还服务。此外，携程还将加大海外租车市场的投入，进一步扩大出境租车免押金的覆盖区域。 </p>
+ </body>
+</html><!--/enpcontent--><!--enpproperty <date>2024-02-01 00:00:00:0</date><author>张宇</author><subtitle></subtitle><introtitle></introtitle><keyword></keyword><paperarticleid>87886</paperarticleid><channel>1</channel><nodeid>0</nodeid><nodename></nodename><url>http://www.ctnews.com.cn/paper/content/202402/01/content_87886.html</url><urlpad>http://www.ctnews.com.cn/pad/content/202402/01/content_87886.html</urlpad><siteid>1</siteid><paperid>1</paperid><title>春节自驾游：走一段文化富足的旅程</title><liability></liability>/enpproperty-->
+					</founder-content>
+					</div>
+				</div>
+				<div class="detail-title mgt10 mgb25">
+					<span class="pull-left"><a href="content_87885.html">上一篇</a> </span>
+					<span class="pull-left mgl10"><a class=preart href="content_87887.html">下一篇</a> </span>
+
+					<div class="pull-right">
+						<a class="font-weight" onClick="zoomIn();" href="javascript:;">放大+</a>
+						&nbsp;<a class="font-weight" onClick="zoomOut();" href="javascript:;">缩小-</a>
+						&nbsp; <a class="font-weight" onClick="zoomDe();" href="javascript:;">默认<span class="font18">o</span></a>
+				
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+		<!--标准尾-->
+	 <div class="footer">
+             <div class="footer-nav">
+			
+            </div>
+			</div>
+           <div class="footer_sqd">
+            <span><a href="//www.ctnews.com.cn/content/2020-02/11/content_71039.html" target="_blank">中国旅游报社简介</a> </span>
+	    <span class="mt16" >
+	    	<a href="#">国内统一刊号：CN11-0013 </a>|
+	    	<a href="#">邮发代号：1-40</a>| 
+	    	<a href="#">新闻热线：010-85168005</a>
+		</span>
+	    <span>中国互联网不良信息举报中心 中华人民共和国互联网新闻信息许可证 （国新网 许可证编号：1012006032）</span>
+	     <span>CopyRight by www.ctnews.com.cn　 京ICP备05019093号-4 <div style="display:none;"> <script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1278972842'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/z_stat.php%3Fid%3D1278972842%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script></div></span>
+        <span>版权所有 中国旅游报 中国 北京</span>
+	    <img src="../../../../../../amucsite/freePaper/pc/static/images/footer_nav_sqd.jpg" alt="" />
+	</div>
+        </div>
+	</div>
+	<!--标准尾end-->
+	
+	
+<table style="display:none;">
+<tr><td>
+
+<!--enpproperty
+<error><!--enpend --></error>
+<date>2024-02-01</date>
+<author>张宇</author>
+<subtitle></subtitle>
+<introtitle></introtitle>
+<keyword></keyword>
+<id>1</id>
+<nodeid>1</nodeid>
+<nodename>中国旅游报</nodename>
+<url>content_87886.html</url>
+<siteid>1</siteid>
+<title>春节自驾游：走一段文化富足的旅程</title> 
+/enpproperty-->
+
+</td></tr>
+</table>
+
+
+
+
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JjDZRJjPYur3koyI",ck: "JjDZRJjPYur3koyI"})</script>
+
+</body>
+</html>
